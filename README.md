@@ -160,6 +160,32 @@ lsof -ti:8081 | xargs kill -9
 npx expo start --ios --port 8082
 ```
 
+#### 8. "Linking requires a build-time setting 'scheme'" Warning
+**Problem**: Warning about missing URL scheme in Expo config.
+
+**Symptoms**:
+```
+WARN Linking requires a build-time setting `scheme` in the project's Expo config (app.config.js or app.json) for production apps
+```
+
+**Solution**:
+1. Add a `scheme` property to your `app.json`:
+   ```json
+   {
+     "expo": {
+       "name": "Expense_Tracker",
+       "scheme": "expensetracker",
+       // ... other config
+     }
+   }
+   ```
+2. Restart the development server:
+   ```bash
+   npx expo start --ios --clear
+   ```
+
+**Why it's needed**: The scheme enables deep linking - allowing other apps or websites to open your app using custom URLs like `expensetracker://some-path`.
+
 ## 📱 Features
 
 - **Transaction Tracking**: Add, edit, and delete expense/income transactions
