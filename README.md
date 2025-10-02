@@ -1,6 +1,16 @@
 # Expense Tracker App
 
-A React Native expense tracking application built with Expo.
+A React Native expense tracking application built with Expo, designed with a **Crystalline Balanced Frosted Glassmorphism** aesthetic.
+
+## ✨ Design Philosophy: Crystalline Glassmorphism
+
+This project follows a specific and sophisticated design system called **Crystalline Balanced Frosted Glassmorphism**. This approach emphasizes:
+
+- **Clarity and Precision**: We use sharp, well-defined glass panels with a subtle blur to maintain readability and a clean, modern feel.
+- **Balanced Hierarchy**: Glass effects are used strategically to create a clear visual hierarchy, guiding the user's focus without overwhelming the interface.
+- **Light and Structure**: The design is built on a foundation of light, transparency, and grid-based layouts to create a sense of order and depth.
+
+This ensures a premium, intuitive, and visually stunning user experience across the entire application.
 
 ## 🚀 Quick Start
 

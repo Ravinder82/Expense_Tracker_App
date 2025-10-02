@@ -117,10 +117,10 @@ export const CustomTabBar = ({ state, descriptors, navigation }) => {
             style={styles.tabItem}
           >
             {/* Custom icon rendering */}
-            {getTabBarIcon(route.name, isFocused, COLORS.primary[500])}
+            {getTabBarIcon(route.name, isFocused, isFocused ? '#475569' : '#94a3b8')}
 
             {/* Custom label rendering */}
-            {getTabBarLabel(label, isFocused, COLORS.primary[500])}
+            {getTabBarLabel(label, isFocused, isFocused ? '#475569' : '#94a3b8')}
 
             {/* Active indicator */}
             {isFocused && <View style={styles.activeIndicator} />}
@@ -136,17 +136,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: COLORS.background.primary,
     borderTopWidth: 1,
-    borderTopColor: COLORS.border.light,
-    height: 64,
-    paddingBottom: 8,
-    paddingTop: 8,
-    shadowColor: COLORS.neutral[900],
+    borderTopColor: 'rgba(226, 232, 240, 0.8)', // Sophisticated light gray border
+    height: 72, // Taller for better proportions
+    paddingBottom: 12, // Increased for better spacing
+    paddingTop: 12, // Increased for better spacing
+    shadowColor: 'rgba(0, 0, 0, 0.08)', // Subtle shadow
     shadowOffset: {
       width: 0,
       height: -2,
     },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
+    shadowRadius: 6, // Slightly larger shadow
     elevation: 8,
   },
 
@@ -155,26 +155,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    paddingVertical: 8, // Better touch targets
+    paddingHorizontal: 4, // Better spacing
   },
 
   tabIcon: {
-    marginBottom: 2,
+    marginBottom: 4, // Increased spacing
   },
 
   tabLabel: {
     ...TYPOGRAPHY.ui.caption,
-    fontSize: 11,
+    fontSize: 12, // Slightly larger for better readability
     textAlign: 'center',
+    fontWeight: '500', // Medium weight for better hierarchy
   },
 
   activeIndicator: {
     position: 'absolute',
-    top: 0,
+    top: 4, // Moved up slightly
     left: '50%',
-    marginLeft: -15,
-    width: 30,
+    marginLeft: -18, // Wider indicator
+    width: 36, // Wider for better proportion
     height: 3,
-    backgroundColor: COLORS.primary[500],
+    backgroundColor: '#475569', // Sophisticated blue-gray
     borderBottomLeftRadius: 2,
     borderBottomRightRadius: 2,
   },

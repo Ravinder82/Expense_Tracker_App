@@ -1,67 +1,92 @@
 import { Tabs } from 'expo-router';
-import { COLORS, TYPOGRAPHY } from '../../constants';
-import { getTabBarIcon, getTabBarLabel } from '../../components/navigation/CustomTabBar';
+import { GlassBottomNav } from '../../components/navigation/GlassBottomNav';
+import { BOTTOM_NAV_VARIANTS } from '../../constants/navigationVariants';
+import { Ionicons } from '@expo/vector-icons';
+import { CrystallineDesign } from '../../constants/glassmorphic';
+import { COLORS } from '../../constants/colors';
+
+const CrystallineNavBar = (props) => (
+  <GlassBottomNav
+    state={props.state}
+    descriptors={props.descriptors}
+    navigation={props.navigation}
+    variant={BOTTOM_NAV_VARIANTS.find(v => v.id === 'crystalline_balanced')}
+  />
+);
 
 export default function TabLayout() {
   return (
     <Tabs
+      tabBar={CrystallineNavBar}
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: COLORS.primary[500],
-        tabBarInactiveTintColor: COLORS.neutral[400],
-        tabBarStyle: {
-          backgroundColor: COLORS.background.primary,
-          borderTopColor: COLORS.border.light,
-          borderTopWidth: 1,
-          height: 64,
-          paddingBottom: 8,
-          paddingTop: 8,
-        },
-        tabBarLabelStyle: {
-          ...TYPOGRAPHY.ui.caption,
-          fontSize: 11,
-          fontWeight: '500',
-        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ focused, color, size }) => getTabBarIcon('home', focused, color, size),
-          tabBarLabel: ({ focused, color }) => getTabBarLabel('Home', focused, color),
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? 'home' : 'home-outline'}
+              size={26} // Slightly larger icons
+              color={focused ? COLORS.primary[500] : COLORS.secondary[500]}
+            />
+          ),
         }}
       />
       <Tabs.Screen
-        name="transactions"
+        name="chart"
         options={{
-          title: 'Transactions',
-          tabBarIcon: ({ focused, color, size }) => getTabBarIcon('transactions', focused, color, size),
-          tabBarLabel: ({ focused, color }) => getTabBarLabel('Transactions', focused, color),
+          title: 'Chart',
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? 'pie-chart' : 'pie-chart-outline'}
+              size={26} // Slightly larger icons
+              color={focused ? COLORS.primary[500] : COLORS.secondary[500]}
+            />
+          ),
         }}
       />
       <Tabs.Screen
-        name="budgets"
+        name="add"
         options={{
-          title: 'Budgets',
-          tabBarIcon: ({ focused, color, size }) => getTabBarIcon('budgets', focused, color, size),
-          tabBarLabel: ({ focused, color }) => getTabBarLabel('Budgets', focused, color),
+          title: 'Add',
+          tabBarLabel: () => null, // Hide label for the center button
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={'add-circle'}
+              size={44} // Larger for center button prominence
+              color={COLORS.status.active} // Use sophisticated green-gray
+              style={{ transform: [{ translateY: -6 }] }} // Slightly higher
+            />
+          ),
         }}
       />
       <Tabs.Screen
-        name="reports"
+        name="profile"
         options={{
-          title: 'Reports',
-          tabBarIcon: ({ focused, color, size }) => getTabBarIcon('reports', focused, color, size),
-          tabBarLabel: ({ focused, color }) => getTabBarLabel('Reports', focused, color),
+          title: 'Profile',
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? 'person' : 'person-outline'}
+              size={26} // Slightly larger icons
+              color={focused ? COLORS.primary[500] : COLORS.secondary[500]}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ focused, color, size }) => getTabBarIcon('settings', focused, color, size),
-          tabBarLabel: ({ focused, color }) => getTabBarLabel('Settings', focused, color),
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? 'settings' : 'settings-outline'}
+              size={26} // Slightly larger icons
+              color={focused ? COLORS.primary[500] : COLORS.secondary[500]}
+            />
+          ),
         }}
       />
     </Tabs>

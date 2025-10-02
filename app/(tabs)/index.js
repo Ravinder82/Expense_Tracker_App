@@ -1,29 +1,36 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { COLORS, TYPOGRAPHY, SPACING } from '../../constants';
+import { CrystallineDesign } from '../../constants/glassmorphic';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={['#667eea', '#764ba2', '#f093fb']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.container}
+    >
       <Text style={styles.title}>Home</Text>
       <Text style={styles.subtitle}>Dashboard Screen</Text>
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
-    ...TYPOGRAPHY.heading.h1,
-    color: COLORS.text.primary,
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
   },
   subtitle: {
-    ...TYPOGRAPHY.body.base,
-    color: COLORS.text.secondary,
+    fontSize: 16,
+    color: 'rgba(255, 255, 255, 0.8)',
     marginTop: SPACING[2],
   },
 });

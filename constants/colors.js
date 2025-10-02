@@ -1,59 +1,59 @@
-// Color Palette for Expense Tracker
+// Color Palette for Expense Tracker - Elegant Black & Gray Minimalist Theme
 export const COLORS = {
-  // Primary Colors
+  // Primary Colors - Sophisticated Blacks and Grays
   primary: {
-    50: '#eff6ff',
-    100: '#dbeafe',
-    200: '#bfdbfe',
-    300: '#93c5fd',
-    400: '#60a5fa',
-    500: '#3b82f6', // Main primary
-    600: '#2563eb',
-    700: '#1d4ed8',
-    800: '#1e40af',
-    900: '#1e3a8a',
+    50: '#fafafa',
+    100: '#f5f5f5',
+    200: '#e5e5e5',
+    300: '#d4d4d4',
+    400: '#a3a3a3',
+    500: '#737373', // Main primary - elegant medium gray
+    600: '#525252',
+    700: '#404040',
+    800: '#262626',
+    900: '#171717', // Deep charcoal black
   },
 
-  // Secondary Colors (Expense/Income theme)
+  // Secondary Colors (Expense/Income theme) - Elegant Grays
   secondary: {
-    50: '#f0fdf4',
-    100: '#dcfce7',
-    200: '#bbf7d0',
-    300: '#86efac',
-    400: '#4ade80',
-    500: '#22c55e', // Main secondary (success/green)
-    600: '#16a34a',
-    700: '#15803d',
-    800: '#166534',
-    900: '#14532d',
+    50: '#f8fafc',
+    100: '#f1f5f9',
+    200: '#e2e8f0',
+    300: '#cbd5e1',
+    400: '#94a3b8',
+    500: '#64748b', // Main secondary - sophisticated blue-gray
+    600: '#475569',
+    700: '#334155',
+    800: '#1e293b',
+    900: '#0f172a',
   },
 
-  // Warning/Alert Colors
+  // Warning/Alert Colors - Sophisticated Amber Grays
   warning: {
-    50: '#fffbeb',
-    100: '#fef3c7',
-    200: '#fde68a',
-    300: '#fcd34d',
-    400: '#fbbf24',
-    500: '#f59e0b', // Main warning
-    600: '#d97706',
-    700: '#b45309',
-    800: '#92400e',
-    900: '#78350f',
+    50: '#fefcf7',
+    100: '#fef7ed',
+    200: '#fef3c7',
+    300: '#fde68a',
+    400: '#facc15',
+    500: '#eab308', // Main warning - warm amber gray
+    600: '#ca8a04',
+    700: '#a16207',
+    800: '#854d0e',
+    900: '#713f12',
   },
 
-  // Error/Danger Colors
+  // Error/Danger Colors - Sophisticated Red Grays
   error: {
     50: '#fef2f2',
     100: '#fee2e2',
     200: '#fecaca',
     300: '#fca5a5',
     400: '#f87171',
-    500: '#ef4444', // Main error
-    600: '#dc2626',
-    700: '#b91c1c',
-    800: '#991b1b',
-    900: '#7f1d1d',
+    500: '#dc2626', // Main error - deep red gray
+    600: '#b91c1c',
+    700: '#991b1b',
+    800: '#7f1d1d',
+    900: '#6b1d1d',
   },
 
   // Neutral Colors (Grays)
@@ -70,22 +70,22 @@ export const COLORS = {
     900: '#171717',
   },
 
-  // Background Colors
+  // Background Colors - Sophisticated Gray Scale
   background: {
-    primary: '#ffffff',
-    secondary: '#f8fafc',
-    tertiary: '#f1f5f9',
-    overlay: 'rgba(0, 0, 0, 0.5)',
-    modal: 'rgba(0, 0, 0, 0.6)',
+    primary: '#ffffff', // Pure white for main backgrounds
+    secondary: '#f8fafc', // Very light gray-blue for secondary areas
+    tertiary: '#f1f5f9', // Light gray for tertiary elements
+    overlay: 'rgba(0, 0, 0, 0.4)', // Darker overlay for better contrast
+    modal: 'rgba(0, 0, 0, 0.6)', // Consistent modal background
   },
 
-  // Text Colors
+  // Text Colors - Elegant Gray Hierarchy
   text: {
-    primary: '#1e293b',
-    secondary: '#64748b',
-    tertiary: '#94a3b8',
-    inverse: '#ffffff',
-    disabled: '#cbd5e1',
+    primary: '#1e293b', // Dark slate for primary text
+    secondary: '#64748b', // Medium slate for secondary text
+    tertiary: '#94a3b8', // Light slate for tertiary text
+    inverse: '#ffffff', // Pure white for inverse text
+    disabled: '#cbd5e1', // Very light gray for disabled text
   },
 
   // Border Colors
@@ -96,78 +96,78 @@ export const COLORS = {
     focus: '#3b82f6',
   },
 
-  // Category Colors (for expense categories)
+  // Category Colors (for expense categories) - Sophisticated Gray Scale
   categories: {
-    food: '#ef4444',      // Red
-    transport: '#3b82f6',  // Blue
-    shopping: '#8b5cf6',   // Purple
-    entertainment: '#f59e0b', // Orange
-    bills: '#06b6d4',     // Cyan
-    health: '#10b981',    // Green
-    education: '#6366f1',  // Indigo
-    other: '#6b7280',     // Gray
+    food: '#dc2626',      // Deep red-gray
+    transport: '#475569',  // Sophisticated blue-gray
+    shopping: '#525252',   // Medium gray
+    entertainment: '#eab308', // Warm amber-gray
+    bills: '#334155',     // Darker slate gray
+    health: '#059669',    // Sophisticated green-gray
+    education: '#6366f1',  // Elegant indigo-gray
+    other: '#6b7280',     // Standard gray
   },
 
-  // Status Colors
+  // Status Colors - Elegant Gray Scale
   status: {
-    active: '#22c55e',
-    inactive: '#94a3b8',
-    pending: '#f59e0b',
-    completed: '#3b82f6',
-    cancelled: '#ef4444',
+    active: '#059669',      // Sophisticated green-gray
+    inactive: '#94a3b8',    // Light gray for inactive
+    pending: '#eab308',     // Warm amber-gray for pending
+    completed: '#475569',   // Medium slate gray for completed
+    cancelled: '#dc2626',   // Deep red-gray for cancelled
   },
 
-  // Chart Colors
+  // Chart Colors - Sophisticated Gray Palette
   charts: {
-    income: '#22c55e',
-    expense: '#ef4444',
-    savings: '#3b82f6',
-    budget: '#f59e0b',
+    income: '#059669',      // Sophisticated green-gray
+    expense: '#dc2626',     // Deep red-gray
+    savings: '#475569',     // Medium slate gray
+    budget: '#eab308',      // Warm amber-gray
     series: [
-      '#3b82f6', // Blue
-      '#ef4444', // Red
-      '#22c55e', // Green
-      '#f59e0b', // Orange
-      '#8b5cf6', // Purple
-      '#06b6d4', // Cyan
-      '#f97316', // Orange-red
-      '#84cc16', // Lime
+      '#475569', // Sophisticated blue-gray
+      '#dc2626', // Deep red-gray
+      '#059669', // Sophisticated green-gray
+      '#eab308', // Warm amber-gray
+      '#525252', // Medium gray
+      '#64748b', // Light slate gray
+      '#334155', // Darker slate gray
+      '#6b7280', // Standard gray
     ],
   },
 };
 
-// Semantic Color Mapping
+// Semantic Color Mapping - Elegant Gray Theme
 export const SEMANTIC_COLORS = {
-  // Brand
-  brand: COLORS.primary[500],
-  brandLight: COLORS.primary[400],
-  brandDark: COLORS.primary[600],
+  // Brand - Sophisticated Gray
+  brand: COLORS.primary[500],      // #737373 - elegant medium gray
+  brandLight: COLORS.primary[400],  // #a3a3a3 - lighter gray
+  brandDark: COLORS.primary[600],   // #525252 - darker gray
 
-  // Status
-  success: COLORS.secondary[500],
-  warning: COLORS.warning[500],
-  error: COLORS.error[500],
-  info: COLORS.primary[500],
+  // Status - Refined Grays
+  success: COLORS.status.active,    // #059669 - sophisticated green-gray
+  warning: COLORS.warning[500],     // #eab308 - warm amber-gray
+  error: COLORS.error[500],         // #dc2626 - deep red-gray
+  info: COLORS.secondary[500],      // #64748b - blue-gray for info
 
-  // UI States
-  active: COLORS.primary[500],
-  hover: COLORS.primary[400],
-  disabled: COLORS.neutral[400],
+  // UI States - Clean Grays
+  active: COLORS.primary[500],      // #737373 - active state
+  hover: COLORS.primary[400],       // #a3a3a3 - hover state
+  disabled: COLORS.neutral[400],    // #a3a3a3 - disabled state
 
-  // Text
-  textPrimary: COLORS.text.primary,
-  textSecondary: COLORS.text.secondary,
-  textTertiary: COLORS.text.tertiary,
+  // Text - Elegant Hierarchy
+  textPrimary: COLORS.text.primary,    // #1e293b - dark slate
+  textSecondary: COLORS.text.secondary, // #64748b - medium slate
+  textTertiary: COLORS.text.tertiary,   // #94a3b8 - light slate
 
-  // Backgrounds
-  bgPrimary: COLORS.background.primary,
-  bgSecondary: COLORS.background.secondary,
-  bgTertiary: COLORS.background.tertiary,
+  // Backgrounds - Pure and Sophisticated
+  bgPrimary: COLORS.background.primary,     // #ffffff - pure white
+  bgSecondary: COLORS.background.secondary, // #f8fafc - very light gray-blue
+  bgTertiary: COLORS.background.tertiary,   // #f1f5f9 - light gray
 
-  // Borders
-  borderLight: COLORS.border.light,
-  borderMedium: COLORS.border.medium,
-  borderFocus: COLORS.border.focus,
+  // Borders - Subtle Gray Accents
+  borderLight: COLORS.border.light,     // #e2e8f0 - very light gray
+  borderMedium: COLORS.border.medium,   // #cbd5e1 - light gray
+  borderFocus: COLORS.primary[500],     // #737373 - medium gray for focus
 };
 
 // Export individual colors for easy access
